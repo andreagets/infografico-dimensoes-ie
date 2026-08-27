@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimensões da Inteligência Espiritual no Ecossistema Universitário</title>
+  <!-- Google Fonts & Phosphor Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <style>
+    :root {
+      --bg-main: #0B0F19;
+      --bg-card: #131A2A;
+      --bg-card-hover: #1C263D;
+      --bg-accent: #1E293B;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --gold-glow: rgba(212, 175, 55, 0.18);
+      --indigo: #6366F1;
+      --cyan: #06B6D4;
+      --emerald: #10B981;
+      --rose: #F43F5E;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Inter', sans-serif;
+      --radius: 14px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding-bottom: 60px;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 35%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER & HERO */
+    header {
+      padding: 48px 0 24px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 32px;
+      background: linear-gradient(180deg, rgba(19, 26, 42, 0.8) 0%, transparent 100%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--gold-glow);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #FFFFFF 40%, var(--gold-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 860px;
+      margin-bottom: 20px;
+    }
+
+    .author-credit {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      padding: 8px 18px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    /* TRIAD CARDS */
+    .triad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 24px 0 16px;
+    }
+
+    .triad-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .triad-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+    }
+
+    .triad-card.qi::before { background: var(--cyan); }
+    .triad-card.qe::before { background: var(--rose); }
+    .triad-card.qs::before { background: var(--gold); }
+
+    .triad-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    .triad-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .triad-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .qi .triad-tag { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
+    .qe .triad-tag { background: rgba(244, 63, 94, 0.15); color: var(--rose); }
+    .qs .triad-tag { background: rgba(212, 175, 55, 0.15); color: var(--gold-light); }
+
+    .triad-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .triad-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* TABS NAVIGATION */
+    .nav-tabs {
+      display: flex;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+      margin-bottom: 32px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .tab-btn.active {
+      background: var(--gold-glow);
+      color: var(--gold-light);
+      border-color: rgba(212, 175, 55, 0.35);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SECTION 1: THEORETICAL MODELS */
+    .models-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .author-card-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .author-card-btn:hover {
+      border-color: var(--indigo);
+      background: var(--bg-card-hover);
+    }
+
+    .author-card-btn.active {
+      border-color: var(--gold);
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.12) 0%, rgba(19, 26, 42, 0.9) 100%);
+      box-shadow: 0 0 0 1px var(--gold);
+    }
+
+    .author-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .author-focus {
+      font-size: 0.8rem;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    .author-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .model-detail-view {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .model-detail-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .model-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--text-main);
+    }
+
+    .model-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .badge-primary { background: rgba(99, 102, 241, 0.2); color: #A5B4FC; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .badge-secular { background: rgba(16, 185, 129, 0.15); color: #6EE7B7; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-confessional { background: rgba(244, 63, 94, 0.15); color: #FDA4AF; border: 1px solid rgba(244, 63, 94, 0.3); }
+
+    .quote-box {
+      background: rgba(212, 175, 55, 0.05);
+      border-left: 3px solid var(--gold);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: #E2E8F0;
+      margin-bottom: 28px;
+      font-size: 0.98rem;
+    }
+
+    .dimensions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .dim-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 16px 18px;
+      transition: var(--transition);
+    }
+
+    .dim-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(212, 175, 55, 0.2);
+    }
+
+    .dim-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dim-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* COMPARISON MATRIX TABLE */
+    .table-container {
+      overflow-x: auto;
+      margin-top: 32px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--gold-light);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    /* SECTION 2: PRACTICES */
+    .practices-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .practice-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .practice-card:hover, .practice-card.active {
+      border-color: var(--emerald);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(16, 185, 129, 0.1);
+    }
+
+    .practice-card.active {
+      background: linear-gradient(160deg, rgba(16, 185, 129, 0.08) 0%, var(--bg-card) 100%);
+    }
+
+    .practice-icon {
+      font-size: 2rem;
+      color: var(--emerald);
+      margin-bottom: 14px;
+    }
+
+    .practice-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .practice-target {
+      font-size: 0.8rem;
+      color: #6EE7B7;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+    }
+
+    .practice-detail-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-top: 24px;
+    }
+
+    .mechanism-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      color: #C7D2FE;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 14px 18px;
+      border-radius: 8px;
+    }
+
+    .step-number {
+      background: var(--emerald);
+      color: #064E3B;
+      font-weight: 800;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.85rem;
+    }
+
+    /* SECTION 3: CAMPUS LAB */
+    .lab-filters {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .filter-chip.active {
+      background: var(--cyan);
+      color: #082F49;
+      border-color: var(--cyan);
+    }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .scenario-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+
+    .scenario-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+    }
+
+    .scenario-header {
+      margin-bottom: 14px;
+    }
+
+    .scenario-role {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--cyan);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .scenario-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .scenario-challenge {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .scenario-solution {
+      border-top: 1px solid var(--border-color);
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .solution-dim {
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .solution-action {
+      font-size: 0.88rem;
+      color: #CBD5E1;
+    }
+
+    /* SECTION 4: ASSESSMENT */
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 36px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .quiz-question {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .quiz-q-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 10px;
+    }
+
+    .quiz-opt-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: var(--transition);
+    }
+
+    .quiz-opt-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-main);
+    }
+
+    .quiz-opt-btn.selected {
+      background: var(--gold);
+      color: #1A1500;
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+
+    .quiz-result-box {
+      display: none;
+      margin-top: 32px;
+      padding: 24px;
+      border-radius: 12px;
+      background: linear-gradient(145deg, rgba(212, 175, 55, 0.1) 0%, rgba(19, 26, 42, 0.8) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .result-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+
+    .submit-quiz-btn {
+      width: 100%;
+      background: var(--gold);
+      color: #111827;
+      border: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 10px;
+    }
+
+    .submit-quiz-btn:hover {
+      background: var(--gold-light);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      .model-title { font-size: 1.4rem; }
+      .model-detail-view, .quiz-card { padding: 20px; }
+      .nav-tabs { padding-bottom: 8px; }
+      .tab-btn { padding: 10px 16px; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="hero-badge">
+        <i class="ph ph-sparkle"></i> Design da Informação & Dimensões Existenciais
+      </div>
+      <h1>Dimensões da Inteligência Espiritual no Ecossistema Universitário</h1>
+      <p class="hero-subtitle">
+        Uma cartografia interativa que integra modelos teóricos, mecanismos neurocognitivos, práticas reflexivas e aplicações cotidianas para estudantes, docentes e gestores acadêmicos.
+      </p>
+      
+      <div class="author-credit">
+        <i class="ph ph-chalkboard-teacher"></i> Autoria do Infográfico: <strong>Profa. Dra. Andréa Soares Rocha da Silva</strong>
+      </div>
+
+      <!-- TRÍADE DE INTELIGÊNCIAS -->
+      <div class="triad-grid">
+        <div class="triad-card qi">
+          <div class="triad-header">
+            <span class="triad-title">QI</span>
+            <span class="triad-tag">Racional / Lógico</span>
+          </div>
+          <p class="triad-desc">Pensamento em série, resolução lógica de problemas e processamento analítico de regras pré-estabelecidas.</p>
+        </div>
+        <div class="triad-card qe">
+          <div class="triad-header">
+            <span class="triad-title">QE</span>
+            <span class="triad-tag">Emocional / Social</span>
+          </div>
+          <p class="triad-desc">Reconhecimento de afetos, empatia interpessoal, motivação interna e adequação comportamental contextual.</p>
+        </div>
+        <div class="triad-card qs">
+          <div class="triad-header">
+            <span class="triad-title">QS / IE</span>
+            <span class="triad-tag">Existencial / Sentido</span>
+          </div>
+          <p class="triad-desc">Inteligência fundamental: busca de propósito, transformação de regras, valores supremos e integração holística.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- NAVEGAÇÃO POR ABAS -->
+    <nav class="nav-tabs" aria-label="Abas do Infográfico">
+      <button class="tab-btn active" onclick="switchTab('models')">
+        <i class="ph ph-books"></i> Modelos Teóricos
+      </button>
+      <button class="tab-btn" onclick="switchTab('practices')">
+        <i class="ph ph-brain"></i> Ferramentas de Prática
+      </button>
+      <button class="tab-btn" onclick="switchTab('campus')">
+        <i class="ph ph-buildings"></i> Laboratório Universitário
+      </button>
+      <button class="tab-btn" onclick="switchTab('assessment')">
+        <i class="ph ph-compass"></i> Autoavaliação Reflexiva
+      </button>
+    </nav>
+
+    <!-- ABA 1: MODELOS TEÓRICOS -->
+    <section id="tab-models" class="tab-content active">
+      <div class="models-selector">
+        <button class="author-card-btn active" onclick="loadModel('king')">
+          <span class="author-focus">Psicológico-Empírico</span>
+          <span class="author-name">David B. King & DeCicco</span>
+          <span class="author-meta">4 Dimensões (SISRI-24, 2009)</span>
+        </button>
+        <button class="author-card-btn" onclick="loadModel('zohar')">
+          <span class="author-focus">Filosófico-Existencial</span>
+          <span class="author-name">Danah Zohar & Marshall</span>
+          <span class="author-meta">12 Princípios do QS (2000)</span>
+        </button>
+        <button class="author-card-btn" onclick="loadModel('wigglesworth')">
+          <span class="author-focus">Comportamental / Liderança</span>
+          <span class="author-name">Cindy Wigglesworth</span>
+          <span class="author-meta">21 Habilidades em 4 Quadrantes (2012)</span>
+        </button>
+        <button class="author-card-btn" onclick="loadModel('vallotton')">
+          <span class="author-focus">Teológico-Cristão</span>
+          <span class="author-name">Kris Vallotton</span>
+          <span class="author-meta">5 Dimensões / Mente Renovada (2020)</span>
+        </button>
+      </div>
+
+      <div id="model-display" class="model-detail-view">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+
+      <!-- MATRIZ COMPARATIVA GERAL -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Autor(es)</th>
+              <th>Enfoque Principal</th>
+              <th>Estrutura Central</th>
+              <th>Aplicabilidade Secular</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>David B. King & Teresa DeCicco</strong></td>
+              <td>Psicológico-empírico e adaptativo</td>
+              <td>4 Dimensões restritas (CET, PMP, TA, CSE) / SISRI-24</td>
+              <td><span class="badge badge-secular">Excelente (Alta Rigidez Científica)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Danah Zohar & Ian Marshall</strong></td>
+              <td>Filosófico-existencial e holístico</td>
+              <td>12 Princípios orientadores de sentido e valor</td>
+              <td><span class="badge badge-secular">Boa (Universal e Reflexiva)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Cindy Wigglesworth</strong></td>
+              <td>Pragmático-comportamental e corporativo</td>
+              <td>21 Habilidades distribuídas em 4 Quadrantes (SQ21)</td>
+              <td><span class="badge badge-secular">Excelente (Foco em Liderança)</span></td>
+            </tr>
+            <tr>
+              <td><strong>Kris Vallotton</strong></td>
+              <td>Teológico-cristão e pneumatológico</td>
+              <td>5 Dimensões e 15 Princípios sobrenaturais</td>
+              <td><span class="badge badge-confessional">Baixa/Média (Exige Fé Bíblica)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ABA 2: FERRAMENTAS DE PRÁTICA -->
+    <section id="tab-practices" class="tab-content">
+      <div class="practices-grid">
+        <div class="practice-card active" onclick="loadPractice('journaling')">
+          <div class="practice-icon"><i class="ph ph-pen-nib"></i></div>
+          <div class="practice-target">Autoconsciência & Sentido</div>
+          <div class="practice-title">Journaling Reflexivo</div>
+          <p class="triad-desc">Sincronização entre amígdala e córtex pré-frontal via rotulagem de afeto.</p>
+        </div>
+        <div class="practice-card" onclick="loadPractice('disciplines')">
+          <div class="practice-icon"><i class="ph ph-shield-check"></i></div>
+          <div class="practice-target">Estrutura & Autodomínio</div>
+          <div class="practice-title">Disciplinas Espirituais</div>
+          <p class="triad-desc">Práticas clássicas de Richard Foster: solitude, jejum, simplicidade e confissão.</p>
+        </div>
+        <div class="practice-card" onclick="loadPractice('centering')">
+          <div class="practice-icon"><i class="ph ph-heartbeat"></i></div>
+          <div class="practice-target">Contemplação & Silêncio</div>
+          <div class="practice-title">Centering Prayer</div>
+          <p class="triad-desc">Método de Thomas Keating para transcender o ruído mental e repousar na presença.</p>
+        </div>
+        <div class="practice-card" onclick="loadPractice('mindfulness')">
+          <div class="practice-icon"><i class="ph ph-eye"></i></div>
+          <div class="practice-target">Regulação Metacognitiva</div>
+          <div class="practice-title">Mindfulness Científico</div>
+          <p class="triad-desc">Atenção Focada (FA) e Monitoramento Aberto (OM) validados clinicamente.</p>
+        </div>
+      </div>
+
+      <div id="practice-display" class="practice-detail-box">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- ABA 3: LABORATÓRIO UNIVERSITÁRIO -->
+    <section id="tab-campus" class="tab-content">
+      <div class="lab-filters">
+        <button class="filter-chip active" onclick="filterCampus('all')">
+          <i class="ph ph-users-three"></i> Toda a Comunidade
+        </button>
+        <button class="filter-chip" onclick="filterCampus('student')">
+          <i class="ph ph-student"></i> Estudantes
+        </button>
+        <button class="filter-chip" onclick="filterCampus('professor')">
+          <i class="ph ph-chalkboard-teacher"></i> Docentes / Pesquisadores
+        </button>
+        <button class="filter-chip" onclick="filterCampus('staff')">
+          <i class="ph ph-briefcase"></i> Técnicos-Administrativos
+        </button>
+      </div>
+
+      <div class="scenario-grid" id="scenarios-container">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+    </section>
+
+    <!-- ABA 4: AUTOAVALIAÇÃO REFLEXIVA -->
+    <section id="tab-assessment" class="tab-content">
+      <div class="quiz-card">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <h2 style="font-family: var(--font-display); color: var(--gold-light); margin-bottom: 8px;">Autoavaliação das 4 Dimensões (Baseada no SISRI-24)</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Responda como você costuma vivenciar cada aspecto em sua rotina universitária.</p>
+        </div>
+
+        <form id="quiz-form" onsubmit="calculateQuiz(event)">
+          <div class="quiz-question">
+            <div class="quiz-q-title">1. Pensamento Existencial Crítico (CET): Com que frequência você reflete sobre o propósito maior e o impacto ético dos seus estudos e ações?</div>
+            <div class="quiz-options">
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 1, 1)">Raramente (1)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 1, 2)">Às vezes (2)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 1, 3)">Frequentemente (3)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 1, 4)">Sempre (4)</div>
+            </div>
+            <input type="hidden" name="q1" id="q1" value="0">
+          </div>
+
+          <div class="quiz-question">
+            <div class="quiz-q-title">2. Produção de Significado Pessoal (PMP): Em momentos de fracasso ou frustração acadêmica, você consegue extrair aprendizado e sentido transformador?</div>
+            <div class="quiz-options">
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 2, 1)">Raramente (1)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 2, 2)">Às vezes (2)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 2, 3)">Frequentemente (3)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 2, 4)">Sempre (4)</div>
+            </div>
+            <input type="hidden" name="q2" id="q2" value="0">
+          </div>
+
+          <div class="quiz-question">
+            <div class="quiz-q-title">3. Consciência Transcendental (TA): Você percebe uma profunda interconexão e reverência entre você, seus colegas, a sociedade e a natureza?</div>
+            <div class="quiz-options">
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 3, 1)">Raramente (1)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 3, 2)">Às vezes (2)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 3, 3)">Frequentemente (3)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 3, 4)">Sempre (4)</div>
+            </div>
+            <input type="hidden" name="q3" id="q3" value="0">
+          </div>
+
+          <div class="quiz-question">
+            <div class="quiz-q-title">4. Expansão do Estado Consciente (CSE): Você acessa voluntariamente pausas de silêncio, oração ou atenção plena para restaurar a clareza e reduzir a ansiedade?</div>
+            <div class="quiz-options">
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 4, 1)">Raramente (1)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 4, 2)">Às vezes (2)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 4, 3)">Frequentemente (3)</div>
+              <div class="quiz-opt-btn" onclick="selectOpt(this, 4, 4)">Sempre (4)</div>
+            </div>
+            <input type="hidden" name="q4" id="q4" value="0">
+          </div>
+
+          <button type="submit" class="submit-quiz-btn"><i class="ph ph-lightning"></i> Gerar Diagnóstico & Recomendações</button>
+        </form>
+
+        <div id="quiz-result" class="quiz-result-box">
+          <!-- Resultado renderizado via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Curso de Extensão em Inteligência Espiritual | Profa. Dra. Andréa Soares Rocha da Silva</p>
+      <p style="margin-top: 4px; font-size: 0.8rem; color: #64748B;">Fundamentado no Método de Infografia Interativa (Costa, 2015) · Design Thinking · Visual Thinking · Design da Informação</p>
+    </div>
+  </footer>
+
+  <script>
+    /* DADOS DOS MODELOS TEÓRICOS */
+    const modelsData = {
+      king: {
+        title: "David B. King & Teresa L. DeCicco (2009)",
+        badge: "Psicométrico & Adaptativo",
+        secular: "Secular / Científico",
+        quote: "A IE é um conjunto de capacidades mentais que contribuem para a consciência, integração e aplicação adaptativa dos aspectos não materiais e transcendentais da existência.",
+        dimensions: [
+          { title: "Pensamento Existencial Crítico (CET)", desc: "Capacidade de contemplar e refletir sobre problemas existenciais fundamentais: o sentido da vida, a morte, a realidade, a verdade e a justiça." },
+          { title: "Produção de Significado Pessoal (PMP)", desc: "Capacidade de criar, manter e ressignificar experiências pessoais cotidianas e crises, inclusive extraindo crescimento dos fracassos." },
+          { title: "Consciência Transcendental (TA)", desc: "Percepção refinada de dimensões transcendentes e holísticas (do self, dos outros e do universo) durante o estado de vigília." },
+          { title: "Expansão do Estado Consciente (CSE)", desc: "Acesso voluntário e deliberado a estados profundos de consciência (meditação, oração contemplativa), buscando insights e cura interior." }
+        ]
+      },
+      zohar: {
+        title: "Danah Zohar & Ian Marshall (2000)",
+        badge: "Filosófico-Existencial",
+        secular: "Universal / Holístico",
+        quote: "O QS é a inteligência com que solucionamos problemas de sentido e valor; a inteligência com a qual avaliamos qual curso de ação faz mais sentido na vida.",
+        dimensions: [
+          { title: "1. Autoconsciência", desc: "Saber quem você é profundamente, identificando valores inegociáveis e motivações reais." },
+          { title: "2. Espontaneidade / Presença", desc: "Viver no aqui-e-agora com autenticidade, rompendo o piloto automático." },
+          { title: "3. Visão e Valores Profundos", desc: "Tomar decisões pautadas em princípios nobres e não apenas por conveniência." },
+          { title: "4. Holismo", desc: "Compreender a teia em que todas as coisas, pessoas e ecossistemas estão interconectados." },
+          { title: "5. Compaixão", desc: "Empatia profunda combinada com ação benevolente desinteressada." },
+          { title: "6. Celebração da Diversidade", desc: "Acolher e enriquecer-se com as diferenças em vez de temê-las." },
+          { title: "7. Independência de Campo", desc: "Manter princípios sólidos mesmo contra a pressão da maioria." },
+          { title: "8. Humildade", desc: "Reconhecer que se é parte de um drama maior, aceitando limitações pessoais." },
+          { title: "9. Questionamento Fundamental", desc: "Curiosidade existencial contínua: perguntar constantemente 'por quê?' e 'para quê?'." },
+          { title: "10. Lidar com Paradoxos", desc: "Sustentar a ambiguidade e incertezas sem exigir respostas simplistas." },
+          { title: "11. Intuição", desc: "Acesso a conhecimentos diretos e insights que transcendem a pura lógica formal." },
+          { title: "12. Propósito / Bem Maior", desc: "Viver dedicado a um chamado duradouro que contribua para a sociedade." }
+        ]
+      },
+      wigglesworth: {
+        title: "Cindy Wigglesworth (2012) — Modelo SQ21",
+        badge: "Comportamental & Liderança",
+        secular: "Secular / Corporativo",
+        quote: "IE é a capacidade de agir com sabedoria e compaixão, mantendo a paz interior e exterior, independentemente das circunstâncias.",
+        dimensions: [
+          { title: "Quadrante 1: Autoconsciência (Self-Awareness)", desc: "Consciência dos valores do Eu Superior, clareza de propósito existencial e mapeamento dos gatilhos do ego." },
+          { title: "Quadrante 2: Consciência Universal (Universal Awareness)", desc: "Compreensão da interdependência cósmica, empatia profunda e discernimento das leis e visões de mundo." },
+          { title: "Quadrante 3: Autodomínio (Self-Mastery)", desc: "Alinhamento de conduta aos valores internos, integridade inegociável, disciplina e serenidade sob estresse." },
+          { title: "Quadrante 4: Presença Espiritual / Domínio Social", desc: "Liderança servidora compassiva, sabedoria em conflitos, agente de cura comunitária e paz relacional." }
+        ]
+      },
+      vallotton: {
+        title: "Kris Vallotton (2020) — Mente Sobrenatural",
+        badge: "Teológico-Cristão",
+        secular: "Confessional / Bíblico",
+        quote: "Inteligência Espiritual é a capacidade de alinhar pensamentos e ações à mente de Cristo (1Co 2:16), ouvindo a Deus para atuar com discernimento.",
+        dimensions: [
+          { title: "1. Dons Espirituais", desc: "Reconhecimento e ativação prática de sabedoria, discernimento e capacidades espirituais concedidas por Deus." },
+          { title: "2. Renovação da Mente", desc: "Superação de pensamentos limitantes e egoístas para pensar com a perspectiva divina de esperança e verdade." },
+          { title: "3. Esfera de Influência Divina", desc: "Identificação do território vocacional em que a pessoa foi designada para gerar transformação positiva." },
+          { title: "4. Criatividade Espiritual & Revelação", desc: "Recepção de soluções e insights inovadores inspirados espiritualmente para problemas complexos." },
+          { title: "5. Alinhamento com Princípios Eternos", desc: "Decisões morais pautadas no amor, justiça e integridade bíblica acima de conveniências passageiras." }
+        ]
+      }
+    };
+
+    /* DADOS DAS PRÁTICAS */
+    const practicesData = {
+      journaling: {
+        title: "Journaling Reflexivo & Neuroexpressivo",
+        target: "Integração Emocional e Alinhamento Cognitivo",
+        mechanism: "Sincronização Amígdala ↔ Córtex Pré-Frontal (Rotulagem de Afeto)",
+        desc: "A escrita expressiva à mão ou estruturada organiza o caos emocional, abranda a reatividade da amígdala e fortalece as funções executivas do pré-frontal, promovendo neuroplasticidade e reparo neurológico.",
+        steps: [
+          "Diário de Gratidão e Sentido: Liste 3 fatos do dia acadêmico e extraia o valor intrínseco de cada um (PMP de King).",
+          "Rotulagem de Conflitos: Escreva livremente sobre gatilhos emocionais sem autocensura para estruturar a metacognição.",
+          "Reenquadramento Existencial: Questione: 'O que esse obstáculo está ensinando ao meu propósito de longo prazo?'"
+        ]
+      },
+      disciplines: {
+        title: "Disciplinas Espirituais Clássicas (Richard Foster)",
+        target: "Formação do Caráter Interior e Autodomínio",
+        mechanism: "Desaceleração Sensorial e Desconstrução do Ruído do Ego",
+        desc: "Práticas milenares descritas em 'Celebração da Disciplina' que convidam a sair da superficialidade contemporânea para habitar as profundezas do santuário interno da alma.",
+        steps: [
+          "Solitude & Simplicidade: Reserve blocos sem telas ou ruídos para restabelecer a clareza mental e a autonomia interior.",
+          "Jejum Disciplinar: Abstenção deliberada de estímulos imediatos para dominar compulsões e impulsos do ego.",
+          "Confissão e Transparência: Exercício de honestidade radical para romper a duplicidade e cultivar integridade ética."
+        ]
+      },
+      centering: {
+        title: "Centering Prayer (Thomas Keating)",
+        target: "Consciência Transcendental e Repouso Contemplativo",
+        mechanism: "Atenção Não Reativa e Desidentificação com Pensamentos Transitórios",
+        desc: "Método silencioso de abertura do coração e mente a Deus (ou ao Sagrado), baseado em Mt 6.6 ('entra no teu quarto interior'), tratando fluxos mentais como conteúdos passageiros.",
+        steps: [
+          "Escolha de uma Palavra Sagrada: Um símbolo de intenção e consentimento à presença interior (ex.: Paz, Graça, Luz).",
+          "Postura Confortável e Silenciosa: Olhos fechados e respiração natural por 15 a 20 minutos.",
+          "Retorno Gentil: Sempre que pensamentos ou distrações surgirem, retorne suavemente à palavra sagrada sem lutar contra a mente."
+        ]
+      },
+      mindfulness: {
+        title: "Mindfulness Baseado em Evidências (FA & OM)",
+        target: "Regulação Atencional, Metacognição e Flexibilidade Psicológica",
+        mechanism: "Modulação de Circuitos Frontoparietais e Redução da Rede de Modo Padrão (DMN)",
+        desc: "Consciência intencional e não julgadora da experiência no momento presente. Divide-se em práticas formais rigorosas e hábitos informais cotidianos.",
+        steps: [
+          "Atenção Focada (Focused Attention - FA): Concentração sustentada no ar entrando e saindo; redirecionamento suave ao dispersar.",
+          "Monitoramento Aberto (Open Monitoring - OM): Observação equânime do fluxo contínuo de sensações, emoções e pensamentos sem fixação.",
+          "Atenção Informal no Campus: Realizar caminhadas conscientes entre blocos da universidade e refeições atentas sem telas."
+        ]
+      }
+    };
+
+    /* DADOS DO LABORATÓRIO CAMPUS */
+    const scenariosData = [
+      {
+        role: "student",
+        roleLabel: "Estudante",
+        title: "Ansiedade Pré-Provas e Sobrecarga",
+        challenge: "Bloqueio cognitivo e pânico diante da iminência de avaliações decisivas ou defesas de TCC.",
+        dim: "Expansão do Estado Consciente (CSE / King) & Autodomínio",
+        action: "Pausa de 5 minutos de respiração consciente (FA) e reenquadramento no Journaling: 'Minha nota mede meu preparo pontual, não meu valor existencial'."
+      },
+      {
+        role: "student",
+        roleLabel: "Estudante",
+        title: "Fracasso em Disciplina ou Reprovação",
+        challenge: "Sensação de insuficiência, desmotivação e perda do sentido na continuidade do curso.",
+        dim: "Produção de Significado Pessoal (PMP / King)",
+        action: "Aplicação do journaling reflexivo para transformar a frustração em diagnóstico de hábitos de estudo e fortalecimento da resiliência."
+      },
+      {
+        role: "professor",
+        roleLabel: "Docente / Pesquisador",
+        title: "Dilemas Éticos na Pesquisa e Autoria",
+        challenge: "Pressão por publicações aceleradas gerando tentação de simplificar métodos ou disputar autorias.",
+        dim: "Pensamento Crítico Existencial (CET) & Independência de Campo (Zohar)",
+        action: "Pautar linhas de pesquisa em valores nobres e relevância humana, mantendo integridade inegociável frente às métricas puramente quantitativas."
+      },
+      {
+        role: "professor",
+        roleLabel: "Docente / Pesquisador",
+        title: "Esgotamento e Perda de Conexão com Alunos",
+        challenge: "Cinismo acadêmico decorrente de burocracia e sobrecarga docente contínua.",
+        dim: "Compaixão (Zohar) & Presença Espiritual (Wigglesworth)",
+        action: "Prática da escuta empática ativa em sala de aula, resgatando a vocação de educador como serviço ao bem maior."
+      },
+      {
+        role: "staff",
+        roleLabel: "Técnico-Administrativo",
+        title: "Mediação de Conflitos no Atendimento",
+        challenge: "Lidar diariamente com queixas ríspidas de usuários estressados no balcão de serviços acadêmicos.",
+        dim: "Autodomínio (Self-Mastery) & Paz Exterior (Wigglesworth)",
+        action: "Ancoragem na não reatividade: despersonalizar ataques verbais e responder com serenidade firme e acolhimento resolutivo."
+      },
+      {
+        role: "staff",
+        roleLabel: "Técnico-Administrativo",
+        title: "Sensação de Invisibilidade Institucional",
+        challenge: "Sentir que seu trabalho de suporte operacional não tem relevância no ecossistema de ensino.",
+        dim: "Holismo (Zohar) & Esfera de Influência (Vallotton)",
+        action: "Reconhecer que a eficiência e o cuidado dos processos administrativos são o alicerce indispensável para que o ensino e a ciência aconteçam."
+      }
+    ];
+
+    /* CONTROLE DE ABAS */
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      
+      const selectedBtn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+      if (selectedBtn) selectedBtn.classList.add('active');
+      
+      const targetContent = document.getElementById('tab-' + tabId);
+      if (targetContent) targetContent.classList.add('active');
+    }
+
+    /* RENDERIZADOR DO MODELO TEÓRICO */
+    function loadModel(key) {
+      document.querySelectorAll('.author-card-btn').forEach(btn => btn.classList.remove('active'));
+      const activeBtn = Array.from(document.querySelectorAll('.author-card-btn')).find(b => b.getAttribute('onclick').includes(key));
+      if (activeBtn) activeBtn.classList.add('active');
+
+      const data = modelsData[key];
+      const container = document.getElementById('model-display');
+      
+      let dimsHtml = data.dimensions.map(d => `
+        <div class="dim-card">
+          <div class="dim-title"><i class="ph ph-sparkle"></i> ${d.title}</div>
+          <div class="dim-desc">${d.desc}</div>
+        </div>
+      `).join('');
+
+      container.innerHTML = `
+        <div class="model-detail-header">
+          <div>
+            <h2 class="model-title">${data.title}</h2>
+          </div>
+          <div class="model-badges">
+            <span class="badge badge-primary">${data.badge}</span>
+            <span class="badge ${key === 'vallotton' ? 'badge-confessional' : 'badge-secular'}">${data.secular}</span>
+          </div>
+        </div>
+        <div class="quote-box">
+          <i class="ph ph-quotes"></i> "${data.quote}"
+        </div>
+        <div class="dimensions-grid">
+          ${dimsHtml}
+        </div>
+      `;
+    }
+
+    /* RENDERIZADOR DAS PRÁTICAS */
+    function loadPractice(key) {
+      document.querySelectorAll('.practice-card').forEach(card => card.classList.remove('active'));
+      const activeCard = Array.from(document.querySelectorAll('.practice-card')).find(c => c.getAttribute('onclick').includes(key));
+      if (activeCard) activeCard.classList.add('active');
+
+      const data = practicesData[key];
+      const container = document.getElementById('practice-display');
+
+      let stepsHtml = data.steps.map((step, idx) => `
+        <li class="step-item">
+          <span class="step-number">${idx + 1}</span>
+          <div style="font-size: 0.92rem; color: #E2E8F0;">${step}</div>
+        </li>
+      `).join('');
+
+      container.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 12px;">
+          <h2 style="font-family: var(--font-display); font-size: 1.6rem; color: #F8FAFC;">${data.title}</h2>
+          <span style="font-size: 0.8rem; color: var(--gold-light); font-weight: 700; text-transform: uppercase;">${data.target}</span>
+        </div>
+        <div class="mechanism-pill">
+          <i class="ph ph-cpu"></i> Mecanismo Neurocognitivo: <strong>${data.mechanism}</strong>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">${data.desc}</p>
+        <h4 style="color: var(--gold-light); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;">Protocolo de Aplicação Sugerido:</h4>
+        <ul class="steps-list">
+          ${stepsHtml}
+        </ul>
+      `;
+    }
+
+    /* FILTRO DE CENÁRIOS DO CAMPUS */
+    function filterCampus(role) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      const activeChip = Array.from(document.querySelectorAll('.filter-chip')).find(c => c.getAttribute('onclick').includes(role));
+      if (activeChip) activeChip.classList.add('active');
+
+      const container = document.getElementById('scenarios-container');
+      const filtered = role === 'all' ? scenariosData : scenariosData.filter(s => s.role === role);
+
+      container.innerHTML = filtered.map(item => `
+        <div class="scenario-card">
+          <div>
+            <div class="scenario-header">
+              <span class="scenario-role">${item.roleLabel}</span>
+              <h3 class="scenario-title">${item.title}</h3>
+            </div>
+            <div class="scenario-challenge">
+              <strong style="color: #F87171; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 4px;">Desafio:</strong>
+              ${item.challenge}
+            </div>
+          </div>
+          <div class="scenario-solution">
+            <div class="solution-dim"><i class="ph ph-compass"></i> ${item.dim}</div>
+            <div class="solution-action"><strong>Intervenção:</strong> ${item.action}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    /* AUTOAVALIAÇÃO INTERATIVA */
+    function selectOpt(btn, qNum, score) {
+      const parent = btn.parentElement;
+      parent.querySelectorAll('.quiz-opt-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('q' + qNum).value = score;
+    }
+
+    function calculateQuiz(e) {
+      e.preventDefault();
+      const q1 = parseInt(document.getElementById('q1').value);
+      const q2 = parseInt(document.getElementById('q2').value);
+      const q3 = parseInt(document.getElementById('q3').value);
+      const q4 = parseInt(document.getElementById('q4').value);
+
+      if (q1 === 0 || q2 === 0 || q3 === 0 || q4 === 0) {
+        alert("Por favor, responda todas as 4 dimensões antes de gerar o resultado.");
+        return;
+      }
+
+      const total = q1 + q2 + q3 + q4;
+      const resultBox = document.getElementById('quiz-result');
+      resultBox.style.display = 'block';
+
+      let profile = "";
+      let advice = "";
+
+      if (total <= 8) {
+        profile = "Perfil em Despertar Inicial da IE";
+        advice = "Sua rotina universitária está operando prioritariamente no modo reativo ou automático. Recomenda-se iniciar com 5 minutos diários de <strong>Journaling Expressivo de Gratidão</strong> e pausas conscientes de respiração (Atenção Focada).";
+      } else if (total <= 12) {
+        profile = "Perfil em Desenvolvimento Moderado";
+        advice = "Você possui sensibilidade existencial e ética presente, mas pode oscilar sob pressão extrema de prazos. O aprofundamento das <strong>Disciplinas de Solitude</strong> e o cultivo de <strong>Mindfulness (Monitoramento Aberto)</strong> fortalecerão sua estabilidade emocional.";
+      } else {
+        profile = "Perfil com Alta Integração Espiritual";
+        advice = "Excelente integração reflexiva e ética! Você consegue traduzir propósito em resiliência prática. Recomenda-se canalizar essa capacidade para <strong>Liderança Compassiva</strong> e tutoria ética de colegas no ambiente acadêmico.";
+      }
+
+      resultBox.innerHTML = `
+        <h3 class="result-title"><i class="ph ph-medal"></i> ${profile} (Pontuação: ${total}/16)</h3>
+        <p style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 14px;">${advice}</p>
+        <div style="background: rgba(0,0,0,0.2); padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; color: var(--gold-light);">
+          <strong>Dimensões Avaliadas:</strong> Pensamento Crítico (CET: ${q1}/4) · Significado (PMP: ${q2}/4) · Transcendência (TA: ${q3}/4) · Estados Elevados (CSE: ${q4}/4)
+        </div>
+      `;
+
+      resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* INICIALIZAÇÃO */
+    window.addEventListener('DOMContentLoaded', () => {
+      loadModel('king');
+      loadPractice('journaling');
+      filterCampus('all');
+    });
+  </script>
+</body>
+</html>
