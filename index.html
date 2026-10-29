@@ -703,6 +703,37 @@
       color: var(--text-muted);
     }
 
+    .citation-info {
+      max-width: 920px;
+      margin: 28px auto;
+      padding: 22px 24px;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      background: rgba(15, 23, 42, 0.45);
+      text-align: left;
+    }
+
+    .citation-info h3 {
+      margin: 0 0 10px;
+      color: var(--gold-light);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+    }
+
+    .citation-info p {
+      margin: 0 0 20px;
+      line-height: 1.7;
+    }
+
+    .citation-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .citation-info a {
+      color: var(--gold-light);
+      overflow-wrap: anywhere;
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       h1 { font-size: 1.8rem; }
@@ -964,7 +995,15 @@
 
   <footer>
     <div class="container">
-      <p>© Curso de Extensão em Inteligência Espiritual | Profa. Dra. Andréa Soares Rocha da Silva</p>
+      <div class="citation-info">
+        <h3>Como referenciar</h3>
+        <p>SILVA, Andréa Soares Rocha da. <strong>Dimensões da inteligência espiritual no ecossistema universitário</strong>: uma cartografia interativa que integra modelos teóricos, mecanismos neurocognitivos, práticas reflexivas e aplicações cotidianas para estudantes, docentes e gestores acadêmicos. Infográfico interativo. [S. l.: s. n.], [202-]. Disponível em: <a href="https://andreagets.github.io/infografico-dimensoes-ie/" target="_blank" rel="noopener noreferrer">https://andreagets.github.io/infografico-dimensoes-ie/</a>. Acesso em: [data-de-acesso].</p>
+
+        <h3>Como citar</h3>
+        <p>(Silva, 2026) ou Silva (2026).</p>
+      </div>
+
+      <p>© 2026 Andréa Soares Rocha da Silva. Todos os direitos reservados à autora.</p>
       <p style="margin-top: 4px; font-size: 0.8rem; color: #64748B;">Fundamentado no Método de Infografia Interativa (Costa, 2015) · Design Thinking · Visual Thinking · Design da Informação</p>
     </div>
   </footer>
